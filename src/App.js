@@ -13,7 +13,7 @@ const App = () => {
   useEffect(() => {
     const fetchPosts = async () => {
       setLoading(true);
-      const res = await axios.get('https://jsonplaceholder.typicode.com/posts');
+      const res = await axios.get('http://localhost:8080/v1/lookup/billingcode')
       setPosts(res.data);
       setLoading(false);
     };
