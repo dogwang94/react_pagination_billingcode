@@ -13,7 +13,7 @@ const App = () => {
   useEffect(() => {
     const fetchPosts = async () => {
       setLoading(true);
-      const res = await axios.get('https://jsonplaceholder.typicode.com/posts');
+      const res = await axios.get('http://localhost:8080/v1/lookup/billingcode');
       setPosts(res.data);
       setLoading(false);
     };
@@ -31,7 +31,7 @@ const App = () => {
 
   return (
     <div className='container mt-5'>
-      <h1 className='text-primary mb-3'>My Blog</h1>
+      <h1 className='text-primary mb-3'>SEOC Billing Code</h1>
       <Posts posts={currentPosts} loading={loading} />
       <Pagination
         postsPerPage={postsPerPage}
